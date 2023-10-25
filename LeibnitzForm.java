@@ -30,9 +30,12 @@ public class LeibnitzForm {
         return currentApprox;
     }
     public static void main(String[] args) {
-        // System.out.println(nextThingRec((4/1), 1, false, 10001));
+        // Recursive call results in stack overflow error w/ larger numbers
+        // System.out.println(nextThingRec((4/1), 1, false, 10000000));
 
+        // Iterative method has no issue w/ larger numbers
         System.out.println(nextThingItr(10000000));
+
 
     }
 }
